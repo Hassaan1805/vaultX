@@ -1,0 +1,28 @@
+{
+  "name": "vaultx-root",
+  "version": "1.0.0",
+  "description": "VAULTX — A Premium Blockchain Finance Vault Web3 Application",
+  "private": true,
+  "scripts": {
+    "dev": "npm --prefix frontend run dev",
+    "build": "npm --prefix frontend run build",
+    "test": "npm --prefix contracts run test",
+    "compile": "npm --prefix contracts run compile",
+    "deploy:local": "npm --prefix contracts run deploy:local",
+    "deploy:sepolia": "npm --prefix contracts run deploy:sepolia"
+  },
+  "keywords": [
+    "web3",
+    "ethereum",
+    "sepolia",
+    "finance-vault",
+    "solidity",
+    "hardhat",
+    "metamask",
+    "ethers-v6",
+    "react",
+    "vite"
+  ],
+  "author": "VAULTX Core Team",
+  "license": "MIT"
+}

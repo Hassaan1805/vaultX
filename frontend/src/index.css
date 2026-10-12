@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  --neon: #C5FF36;
+  --neon-glow: rgba(197, 255, 54, 0.18);
+  --bg-deep: #050607;
+  --bg-card: #0A0C0E;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-deep);
+  color: #EDEDED;
+  font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* Editorial typography utilities */
+.font-mono-numbers {
+  font-family: 'JetBrains Mono', monospace;
+  font-feature-settings: 'tnum' on, 'zero' on;
+}
+
+/* Ambient Subtle Grid Pattern */
+.bg-vault-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+.bg-vault-dots {
+  background-size: 24px 24px;
+  background-image: radial-gradient(rgba(197, 255, 54, 0.08) 1px, transparent 0);
+}
+
+/* Glowing Neon Elements */
+.neon-glow-card {
+  position: relative;
+  background: rgba(10, 12, 14, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.neon-glow-card:hover {
+  border-color: rgba(197, 255, 54, 0.25);
+  box-shadow: 0 0 35px rgba(197, 255, 54, 0.08);
+}
+
+.neon-border-active {
+  border-color: #C5FF36;
+  box-shadow: 0 0 20px rgba(197, 255, 54, 0.25);
+}
+
+/* Neon text & badges */
+.text-neon-glow {
+  color: #C5FF36;
+  text-shadow: 0 0 16px rgba(197, 255, 54, 0.4);
+}
+
+/* Editorial Button Styles */
+.btn-neon-primary {
+  background-color: #C5FF36;
+  color: #050607;
+  font-weight: 600;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 0 20px rgba(197, 255, 54, 0.25);
+}
+
+.btn-neon-primary:hover:not(:disabled) {
+  background-color: #D6FF59;
+  box-shadow: 0 0 32px rgba(197, 255, 54, 0.45);
+  transform: translateY(-1px);
+}
+
+.btn-neon-primary:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+.btn-neon-secondary {
+  background: rgba(255, 255, 255, 0.04);
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-neon-secondary:hover:not(:disabled) {
+  background: rgba(197, 255, 54, 0.08);
+  border-color: rgba(197, 255, 54, 0.3);
+  color: #C5FF36;
+  transform: translateY(-1px);
+}
+
+/* Custom Sleek Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050607;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(197, 255, 54, 0.4);
+}
